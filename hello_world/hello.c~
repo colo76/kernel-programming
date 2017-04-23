@@ -1,0 +1,21 @@
+#include <linux/module.h>
+#include <linux/kernel.h>
+#include <linux/init.h>
+/*
+* Módulo simple que
+*
+*
+*/
+
+static int hello_2_init(void){
+   printk(KERN_INFO "Hola SO2017 \n");
+   return 0;
+}
+
+static void hello_2_exit(void){
+   printk(KERN_INFO "Chau SO2017 \n");
+}
+
+
+module_init(hello_2_init);
+module_exit(hello_2_exit);

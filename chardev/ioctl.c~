@@ -71,9 +71,9 @@ main(){
 
 
    
-   printf("IOCTL_SET_MSG: %ld \n",IOCTL_SET_MSG);
-   printf("IOCTL_GET_MSG: %ld \n",IOCTL_GET_MSG);
-   printf("IOCTL_GET_NTH_BYTE: %ld \n",IOCTL_GET_NTH_BYTE);
+   printf("IOCTL_SET_MSG: %u \n",IOCTL_SET_MSG);
+   printf("IOCTL_GET_MSG: %u \n",IOCTL_GET_MSG);
+   printf("IOCTL_GET_NTH_BYTE: %u \n",IOCTL_GET_NTH_BYTE);
    printf("DEVICE_FILE_NAME: %s \n",DEVICE_FILE_NAME);
 
    ioctl_get_nth_byte(file_desc);

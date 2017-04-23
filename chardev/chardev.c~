@@ -119,12 +119,12 @@ Tenemos los siguientes parámetros:
 
 */
 
-int device_ioctl(struct inode *inode, struct file *file,unsigned int ioctl_num, unsigned long ioctl_param) {
+int device_ioctl(struct inode *inode, struct file *file,unsigned long ioctl_num, unsigned long ioctl_param) {
  int i;
  char *temp;
  char ch;
 
- printk(KERN_INFO "device_ioctl NRO: %u con param %ld \n", ioctl_num,ioctl_param);
+ printk(KERN_INFO "device_ioctl NRO: %ld con param %ld \n", ioctl_num,ioctl_param);
  
   /*
    Switch según la ioctl invocada
