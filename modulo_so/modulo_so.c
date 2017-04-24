@@ -1,6 +1,11 @@
+/*
+* Modulo que transfiere datos desde y hacia el espacio de usuario
+* a través de una entrada del /proc
+*
+*/
+
 #include <linux/module.h> /* Requerido por todos los modulos */ 
 #include <linux/kernel.h> /* Definición de KERN_INFO */
-#include <linux/export.h> /* Definición de la función EXPORT_SYMBOL */
 #include <linux/proc_fs.h>  /* Para acceder al /proc */
 #include <linux/vmalloc.h>  /* Para manejo de memoria */
 #include <linux/string.h>   
@@ -125,13 +130,6 @@ void modulo_so_clean(void){
 }
 
 
-/* Función a ser exportada por el módulo */
-int f_so(void){
-  return 0;
-}
-
-/* Exportamos la función f_so */
-EXPORT_SYMBOL(f_so);
 
 /* Declaración de las funciones init y cleanup */
 module_init(modulo_so_init);
