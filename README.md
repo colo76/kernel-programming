@@ -13,3 +13,8 @@ modulo_so: Ejemplo simple de módulo que se comunica con el espacio de usuario a
 char_dev: Ejemplo de módulo que se comunica con el espacio de usuario a través de IOCTL
 
 
+En todos los casos para instalar el módulo:
+
+$ make
+
+$ sudo insmod <nombre_modulo>.ko
